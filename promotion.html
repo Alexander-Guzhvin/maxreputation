@@ -80,7 +80,7 @@
         <div class="escape__container _container-2">
             <div class="escape__title _title-2">Сделаем всё для успешного онлайн-продвижения</div>
             <div class="escape__content">
-                <div class="escape__item escape__item-1">
+                <div class="escape__item  escape__item-1 element-animation">
                     <div class="escape__bg">
                         <div class="escape__top _top"><img src="https://static.tildacdn.com/tild3666-3862-4963-b564-393632346564/Group_70.svg" alt=""></div>
                         <div class="escape__wrapper">
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="escape__item escape__item-2">
+                <div class="escape__item  escape__item-2 element-animation">
                     <div class="escape__bg">
                         <div class="escape__top _top"><img src="https://static.tildacdn.com/tild3666-3862-4963-b564-393632346564/Group_70.svg" alt=""></div>
                         <div class="escape__wrapper">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="escape__item escape__item-3">
+                <div class="escape__item  escape__item-3 element-animation">
                     <div class="escape__bg">
                         <div class="escape__top _top"><img src="https://static.tildacdn.com/tild3666-3862-4963-b564-393632346564/Group_70.svg" alt=""></div>
                         <div class="escape__wrapper">
@@ -164,10 +164,10 @@
                     <div class="find__images">
                         <img src="https://static.tildacdn.com/tild6562-6634-4436-b630-623231653330/_2_3.svg" class="find__girl" alt="">
                         <div class="find__mini-img">
-                            <img src="https://static.tildacdn.com/tild3463-3834-4766-b330-303632326439/__3.svg" class="find__img-1" alt="">
-                            <img src="https://static.tildacdn.com/tild3462-6466-4664-a139-636333653139/__4.svg" class="find__img-2" alt="">
-                            <img src="https://static.tildacdn.com/tild6363-3564-4231-a533-323332323864/__2_2.svg" class="find__img-3" alt="">
-                            <img src="https://static.tildacdn.com/tild3135-6462-4662-b135-306664373862/__6.svg" class="find__img-4" alt="">
+                            <img src="https://static.tildacdn.com/tild3463-3834-4766-b330-303632326439/__3.svg" class="find__img-1 element-animation" alt="">
+                            <img src="https://static.tildacdn.com/tild3462-6466-4664-a139-636333653139/__4.svg" class="find__img-2 element-animation" alt="">
+                            <img src="https://static.tildacdn.com/tild6363-3564-4231-a533-323332323864/__2_2.svg" class="find__img-3 element-animation" alt="">
+                            <img src="https://static.tildacdn.com/tild3135-6462-4662-b135-306664373862/__6.svg" class="find__img-4 element-animation" alt="">
                         </div>
                     </div>
                     <img src="https://static.tildacdn.com/tild3831-3662-4039-a334-626662373339/Vector_-_2021-11-16T.svg" alt="" class="find__background">
@@ -181,7 +181,7 @@
         <div class="do__container _container-2">
             <div class="do__title _title-2">Сделаем всё для успешного онлайн-продвижения</div>
             <div class="do__content">
-                <div class="do__item do__item-1">
+                <div class="do__item do__item-1 element-animation">
                     <img src="https://static.tildacdn.com/tild3461-3730-4334-a537-323339383631/Frame_14_2.svg" alt="" class="do__img">
                     <div class="do__bg">
                         <div class="do__top _top"><img src="https://static.tildacdn.com/tild3666-3862-4963-b564-393632346564/Group_70.svg" alt=""></div>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="do__item do__item-2">
+                <div class="do__item do__item-2 element-animation">
                     <img src="https://static.tildacdn.com/tild3461-3730-4334-a537-323339383631/Frame_14_2.svg" alt="" class="do__img">
                     <img src="https://static.tildacdn.com/tild6533-6166-4161-a531-316436666338/_1.svg" alt="" class="do__flowwer">
                     
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="do__item do__item-3">
+                <div class="do__item do__item-3 element-animation">
                     <img src="https://static.tildacdn.com/tild3461-3730-4334-a537-323339383631/Frame_14_2.svg" alt="" class="do__img">
                     <div class="do__bg">
                         <div class="do__top _top"><img src="https://static.tildacdn.com/tild3666-3862-4963-b564-393632346564/Group_70.svg" alt=""></div>
@@ -482,6 +482,22 @@ return function () {
 var accordion1 = accordion();
 accordion1.init('#accordion');
 
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+       change.target.classList.add('element-show');
+      }
+    });
+  }
+  
+  let options = {
+    threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+  
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
     </script>
     <script src="js/script.js"></script>
 </body>

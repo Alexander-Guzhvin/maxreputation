@@ -107,6 +107,18 @@ html{
     color: #d24a43;;
   }
 
+  .element-animation {
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+  }
+
 img{
   max-width: 100%;
 }
@@ -1022,7 +1034,7 @@ margin-top: 100px;
   margin-top: 70px;
 }
 .escape__item-2{
-  left: 50%;
+  left: 33.4%;
   transform: translate(-50%);
   margin-top: 150px;
 }
@@ -1796,7 +1808,165 @@ textarea.form-input {
 .collect{
   padding-bottom: 40px;
 }
+@media (max-width: 1600px) and (min-width: 961px){
 
+  .reputation{
+    height: auto;
+    padding: 130px 0;
+    padding-top: 80px;
+  }
+  .reputation__content{
+    padding-top: 0;
+  }
+  .reputation__img{
+    position: fixed;
+    z-index: 1;
+    top: 54px;
+    right: 93px;
+    height: 944px;
+    width: 1552px;
+    transform: scale(1.1);
+    background: #ddd;
+    transition: all 2s ease;
+    animation: move 2s infinite linear;
+    animation-direction: alternate;
+  }
+  ._container{
+    padding:0 40px;
+    width: 1240px;
+  }
+  ._title{
+    font-size: 52px;
+    line-height: 60px;
+  }
+  .reputation__text{
+    font-size: 18px;
+  }
+  .reputation__button{
+    font-size: 16px;
+    width: 300px;
+    height: 80px;
+  }
+  .reviews{
+    height: auto;
+    padding: 100px 0;
+  }
+  .force{
+    height: auto;
+    padding: 100px 0;
+  }
+  .problem{
+    height: auto;
+    padding: 100px 0;
+  }
+  .start{
+    height: auto;
+    padding: 150px 0;
+  }
+  .our{
+    height: auto;
+    padding: 100px 0;
+  }
+  .cage{
+    height: auto;
+    padding: 100px 0;
+  }
+  .reviews__title{
+    font-size: 46px;
+  }
+  .reviews__img{
+    transform: scale(1.3);
+    right: -600px;
+    top: 100px;
+    height: 750px;
+  }
+  .reviews__number{
+    font-size: 50px;
+  }
+  .reviews__text{
+    font-size: 21px;
+  }
+  .reviews__subtext{
+    margin-top: 0;
+    font-size: 17px;
+  }
+  .force__item{
+    width: 240px;
+  }
+  .force__info{
+    padding: 50px;
+    width: 700px;
+  }
+  .force__stick {
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 1;
+    left: -39px;
+    top: 80px;
+}
+  .force__title{
+    font-size: 46px;
+    line-height: 55px;
+  }
+  .problem__item{
+    width: 340px;
+  }
+  .start__button{
+    margin-top: 65px;
+  }
+  .our__item{
+    width: 560px;
+  }
+  .accordion-item-header{
+    padding: 22px 0;
+  }
+  .collect__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .collect-img-back{
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .launch__item-1{
+    right: 100px;
+  }
+  .launch__item-2{
+    right: 0px;
+  }
+  .launch__item-3{
+    right: 0px;
+  }
+  .launch{
+    padding-top: 50px;
+  }
+  .launch__content{
+    margin-left: 0;
+  }
+  .launch__button{
+    height: 60px;
+    font-size: 16px;
+  }
+  .launch__background{
+    right: 0;
+  }
+  .escape{
+    height: auto;
+    padding-bottom: 800px;
+  }
+  .up__background{
+    right: 0;
+  }
+  .kpi__background{
+    left: 0;
+  }
+  .questions__background-2{
+    right: 250px;
+  }
+}
   @media (max-width: 960px) {
     .header__content {
       display: flex;
