@@ -627,7 +627,7 @@ padding-top: 32px;
 
 .accordion-item:before {
   content: '';
-  width: 15px;
+  width: 23px;
   cursor: pointer;
   height: 5px;
   background-color: #0083f9;
@@ -644,7 +644,7 @@ padding-top: 32px;
 .accordion-item:after {
   content: '';
   cursor: pointer;
-  width: 15px;
+  width: 23px;
   height: 5px;
   background-color: #0083f9;
   position: absolute;
@@ -761,12 +761,27 @@ padding-top: 32px;
 
 .launch__subtop{
   height: 50px;
+  padding: 0 30px;
   border-width: 1px;
     border-radius: 0px;
     background-color: #d24a43;
     background-position: center center;
     border-color: #202020;
     border-style: solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 24px;
+}
+.launch__subtop-block{
+  width: 100%;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  background-position: center center;
+  border-color: #202020;
+  border-style: solid;
+  height: 24px;
 }
 .launch__wrapper{
   padding: 40px;
@@ -1808,12 +1823,16 @@ textarea.form-input {
 .collect{
   padding-bottom: 40px;
 }
+.menu__item-2 a{
+  font-size: 14px;
+  color: #454545;
+}
 @media (max-width: 1600px) and (min-width: 961px){
 
   .reputation{
     height: auto;
     padding: 130px 0;
-    padding-top: 80px;
+    padding-top: 30px;
   }
   .reputation__content{
     padding-top: 0;
@@ -1941,7 +1960,7 @@ textarea.form-input {
     right: 0px;
   }
   .launch{
-    padding-top: 50px;
+    padding-top: 10px;
   }
   .launch__content{
     margin-left: 0;
@@ -2473,6 +2492,13 @@ width:100%;
     }
     .pagination {
       padding-bottom: 20px;
+    }
+    .launch__subtop{
+      padding: 0 10px;
+      column-gap: 10px;
+    }
+    .launch__subtop img{
+      width: 19px;
     }
   }
 
